@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iyashi Clinics Chatbot</title>
+  <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+
+<div id="chatbot-launcher">💬</div>
+
+<div id="chatbot-container" class="hidden">
+  <div class="chat-header">
+    <span>Iyashi Assistant</span>
+    <button id="close-chat">✖</button>
+  </div>
+
+  <div class="chat-body" id="chat-body"></div>
+
+  <div class="quick-actions">
+    <button class="primary" onclick="quickReply('Book Appointment')">Book Appointment</button>
+    <button class="primary" onclick="quickReply('Available IV Drips')">IV Drips</button>
+    <button class="primary" onclick="quickReply('Surgery Services')">Surgery</button>
+
+    <button class="secondary" onclick="quickReply('Clinic Address')">Clinic Address</button>
+    <button class="secondary" onclick="quickReply('Contact Number')">Call Us</button>
+    <button class="secondary" onclick="quickReply('Working hours')">Working Hours</button>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="user-input" placeholder="Ask about services...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <div class="trust-text">Your information is kept confidential</div>
+</div>
+
+<script src="/static/index.js"></script>
+</body>
+</html>
